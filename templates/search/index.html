@@ -1,0 +1,8 @@
+<input id="search" type="text" />
+<input type="button" value="Search!"/>
+<script type="text/javascript">
+	var search = $('input#search').first();
+	$('input[type=button]').first().click(function() {
+		window.location.href = window.location.href + search[0].value;
+	});
+</script>
