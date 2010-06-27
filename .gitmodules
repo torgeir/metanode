@@ -1,0 +1,6 @@
+[submodule "vendor/tnode"]
+	path = vendor/tnode
+	url = git://github.com/torgeir/tnode.git
+[submodule "vendor/metadatajs"]
+	path = vendor/metadatajs
+	url = git://github.com/gnab/metadatajs.git
