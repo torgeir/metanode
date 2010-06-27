@@ -4,3 +4,6 @@
 [submodule "vendor/metadatajs"]
 	path = vendor/metadatajs
 	url = git://github.com/gnab/metadatajs.git
+[submodule "vendor/jquery"]
+	path = vendor/jquery
+	url = git://github.com/jquery/jquery.git
