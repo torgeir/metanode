@@ -1,8 +1,10 @@
-<input id="search" type="text" />
-<input type="button" value="Search!"/>
-<script type="text/javascript">
-	var search = $('input#search').first();
-	$('input[type=button]').first().click(function() {
-		window.location.href = window.location.href + search[0].value;
-	});
-</script>
+- var action = url('searchSearch').replace(/\/$/, '');
+form(action: action, method:"get")
+  input(id:"search", name:"q", type:"text")
+  input(type:"submit", value:"Search!")
+
+- if (q)     
+  p
+    | You searched for
+    strong= q
+    != partial('search/response', { tracks: tracks, q: q })

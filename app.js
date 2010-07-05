@@ -1,8 +1,10 @@
 require.paths.unshift(__dirname + '/actions/');
 require.paths.unshift(__dirname + '/vendor/');
+require.paths.unshift(__dirname + '/vendor/tnode/');
+require.paths.unshift(__dirname + '/vendor/tnode/lib/');
 
 var sys = require('sys');
-var t = require('tnode/t');
+var t = require('t');
 var search = require('search/search');
 
 t.app({
@@ -10,9 +12,8 @@ t.app({
     routes: {
         '^/(web/.*)$': t.serve,
         '^/search/?$': search.index,
-        '^/search/(.*)/?$': search.search,
-        '^/$': function(req, res) {
-            return 'index';
+        '^/$': function index(req, res) {
+            res.template('index');
         }
     }
 });
